@@ -42,6 +42,7 @@ cvox.MathmlStoreRules.initCustomFunctions_ = function () {
 };
 cvox.MathmlStoreRules.initDefaultRules_ = function () {
     (0, cvox.MathmlStoreRules.defineDefaultMathmlRule_)("math", "[m] ./*");
+    (0, cvox.MathmlStoreRules.defineDefaultMathmlRule_)("semantics", "[n] ./*[1]");
     (0, cvox.MathmlStoreRules.defineDefaultMathmlRule_)("mspace", "[p] (pause:250)");
     (0, cvox.MathmlStoreRules.defineDefaultMathmlRule_)("mstyle", "[m] ./*");
     (0, cvox.MathmlStoreRules.defineDefaultMathmlRule_)("mpadded", "[m] ./*");

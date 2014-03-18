@@ -151,6 +151,8 @@ cvox.SemanticTree.prototype.parseMathml_ = function (a) {
     case "MPADDED":
         ;
     case "MSTYLE":
+        ;
+    case "SEMANTICS":
         return b = cvox.SemanticUtil.purgeNodes(b), 1 == b.length ? this.parseMathml_(b[0]) : this.processRow_(this.parseMathmlChildren_(b));
     case "MFRAC":
         return a = this.makeBranchNode_(cvox.SemanticAttr.Type.FRACTION, [this.parseMathml_(b[0]), this.parseMathml_(b[1])], []), a.role = cvox.SemanticAttr.Role.DIVISION, a;

@@ -46,8 +46,8 @@ cvox.SemanticUtil.numberToUnicode = function (a) {
 cvox.SemanticUtil.tagName = function (a) {
     return a.tagName.toUpperCase()
 };
-cvox.SemanticUtil.IGNORETAGS = "MERROR MPHANTOM MSPACE MACTION MALIGNGROUP MALIGNMARK MACTION".split(" ");
-cvox.SemanticUtil.EMPTYTAGS = ["MATH", "MROW", "MPADDED", "MSTYLE"];
+cvox.SemanticUtil.IGNORETAGS = "MERROR MPHANTOM MSPACE MACTION MALIGNGROUP MALIGNMARK MACTION ANNOTATION ANNOTATION-XML".split(" ");
+cvox.SemanticUtil.EMPTYTAGS = ["MATH", "MROW", "MPADDED", "MSTYLE", "SEMANTICS"];
 cvox.SemanticUtil.purgeNodes = function (a) {
     for (var b = [], c = 0, d; d = a[c]; c++) {
         var e = cvox.SemanticUtil.tagName(d); - 1 == cvox.SemanticUtil.IGNORETAGS.indexOf(e) && (-1 != cvox.SemanticUtil.EMPTYTAGS.indexOf(e) && 0 == d.childNodes.length || b.push(d))
